@@ -19,13 +19,11 @@ public class NombreCapitalizado {
         sc.close();
 
         if (nombre.length() == 0) {
-            System.out.println("Error: no has introducido ningún nombre.");
-            return;
+            System.out.println("Error: no has introducido ningún nombre.");            
+        } else {
+           String primera = nombre.substring(0, 1).toUpperCase();
+           String resto = nombre.substring(1).toLowerCase();
+           System.out.println(primera + resto);
         }
-
-        String primera = nombre.substring(0, 1).toUpperCase();
-        String resto = nombre.substring(1).toLowerCase();
-
-        System.out.println(primera + resto);
     }
 }
