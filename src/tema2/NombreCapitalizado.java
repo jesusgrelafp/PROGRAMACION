@@ -22,7 +22,8 @@ public class NombreCapitalizado {
             System.out.println("Error: no has introducido ningún nombre.");            
         } else {
            String primera = nombre.substring(0, 1).toUpperCase();
-           String resto = nombre.substring(1).toLowerCase();
+           //String resto = nombre.substring(1).toLowerCase();
+            String resto = nombre.substring(1,nombre.length()).toLowerCase();
            System.out.println(primera + resto);
         }
     }
