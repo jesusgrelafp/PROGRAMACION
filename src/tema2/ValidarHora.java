@@ -28,6 +28,20 @@ public class ValidarHora {
         System.out.print("Introduce una hora con formato HH:MM: ");
         String h = sc.nextLine();
 
+        sc.close();
+
+
+        if ( (h.length() == 5) &&
+             (h.charAt(0) >= '0' && h.charAt(0) <= '9') &&  (h.charAt(1) >= '0' && h.charAt(1) <= '9') &&
+             (h.charAt(2) == ':') &&
+             (h.charAt(3) >= '0' && h.charAt(3) <= '9') &&  (h.charAt(4) >= '0' && h.charAt(4) <= '9') ) {
+           System.out.println("La hora es válida");
+        } else {
+           System.out.println("La hora no es válida");
+        }
+
+/*   OTRA SOLUCIÓN
+
         boolean horaValida = true;
 
         // La cadena debe tener exactamente 5 caracteres.
@@ -58,17 +72,7 @@ public class ValidarHora {
             System.out.println("La hora no es válida");
         }
 
-        /*  Otra solución
-        if ( (h.length() == 5) &&
-             (h.charAt(0) >= '0' && h.charAt(0) <= '9') &&  (h.charAt(1) >= '0' && h.charAt(1) <= '9') &&
-             (h.charAt(2) == ':') && 
-             (h.charAt(3) >= '0' && h.charAt(3) <= '9') &&  (h.charAt(4) >= '0' && h.charAt(4) <= '9') ) {                
-            System.out.println("La hora es válida");
-        } else {
-            System.out.println("La hora no es válida");
-        }
-        */
+     FIN OTRA SOLUCION */
 
-        sc.close();
     }
 }
