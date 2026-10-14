@@ -58,6 +58,17 @@ public class ValidarHora {
             System.out.println("La hora no es válida");
         }
 
+        /*  Otra solución
+        if ( (h.length() == 5) &&
+             (h.charAt(0) >= '0' && h.charAt(0) <= '9') &&  (h.charAt(1) >= '0' && h.charAt(1) <= '9') &&
+             (h.charAt(2) == ':') && 
+             (h.charAt(3) >= '0' && h.charAt(3) <= '9') &&  (h.charAt(4) >= '0' && h.charAt(4) <= '9') ) {                
+            System.out.println("La hora es válida");
+        } else {
+            System.out.println("La hora no es válida");
+        }
+        */
+
         sc.close();
     }
 }
