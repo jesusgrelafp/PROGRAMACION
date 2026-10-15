@@ -25,6 +25,37 @@ public class PositivosHastaCero {
         String textoSuma = "";
 
         do {
+            System.out.print("Introduce un entero positivo, cero para salir: ");
+            num = entrada.nextInt();
+            if (num > 0) {
+                total += num;
+                if (textoSuma.isEmpty()) {  // Si es el primer número, lo ponemos tal cual.
+                    textoSuma = ""+num;
+                } else {                    // Si ya hay números, le añadimos el "+" por delante.
+                    textoSuma += "+" + num;
+                }
+            }
+        } while (num != 0);
+        System.out.println(textoSuma + "=" + total);
+        entrada.close();
+    }
+}
+
+
+/* OTRA SOLUCIÓN
+
+import java.util.Scanner;
+
+public class PositivosHastaCero {
+
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+        int num;
+        int total = 0;
+        String textoSuma = "";
+
+        do {
             System.out.println("Introduce un entero positivo, cero para salir");
             num = entrada.nextInt();
 
@@ -38,3 +69,5 @@ public class PositivosHastaCero {
         entrada.close();
     }
 }
+
+FIN OTRA SOLUCIÓN */
