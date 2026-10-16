@@ -28,5 +28,12 @@ public class TrianguloPalabra {
             linea = linea + palabra.charAt(i);
             System.out.println(linea);
         }
+
+         */
+        /* OTRA SOLUCIÓN
+        for ( int i = 1; i <= palabra.length();i++) {
+            System.out.println(palabra.substring(0,i));
+        }
+         */
     }
 }
