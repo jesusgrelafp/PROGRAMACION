@@ -29,7 +29,7 @@ public class TrianguloPalabra {
             System.out.println(linea);
         }
 
-         */
+
         /* OTRA SOLUCIÓN
         for ( int i = 1; i <= palabra.length();i++) {
             System.out.println(palabra.substring(0,i));
