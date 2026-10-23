@@ -46,7 +46,6 @@ public class TrianguloRectangulo {
         // sin relleno
         for (int i = 0; i < altura; i++) {
             for (int j = 0; j <= i; j++) {
-
                 if (i == 0 || i == altura - 1 || j == 0 || j == i)
                     System.out.print("* ");
                 else
