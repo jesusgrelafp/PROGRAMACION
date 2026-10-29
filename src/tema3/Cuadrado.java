@@ -5,11 +5,11 @@ public class Cuadrado {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Lado: ");
-        int altura = sc.nextInt();
+        int lado = sc.nextInt();
         sc.close();
-        dibujarRelleno(altura);
+        dibujarRelleno(lado);
         System.out.println();
-        dibujarHueco(altura);
+        dibujarHueco(lado);
     }
 
     // Cuadrado relleno
