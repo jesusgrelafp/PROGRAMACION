@@ -27,16 +27,16 @@ public class Figuras {
 
             switch (opcion) {
                 case 1:
-                    Cuadrado.dibujarRelleno(pedirNumero(sc, "Lado: "));
+                    dibujarCuadradoRelleno(pedirNumero(sc, "Lado: "));
                     break;
                 case 2:
-                    Cuadrado.dibujarHueco(pedirNumero(sc, "Lado: "));
+                    dibujarCuadradoHueco(pedirNumero(sc, "Lado: "));
                     break;
                 case 3:
-                    Triangulo.dibujarRelleno(pedirNumero(sc, "Altura: "));
+                    dibujarTrianguloRelleno(pedirNumero(sc, "Altura: "));
                     break;
                 case 4:
-                    Triangulo.dibujarHueco(pedirNumero(sc, "Altura: "));
+                    dibujarTrianguloHueco(pedirNumero(sc, "Altura: "));
                     break;
                 case 5:
                     System.out.println("Hasta luego");
@@ -48,4 +48,54 @@ public class Figuras {
 
         sc.close();
     }
+
+    // Cuadrado relleno
+    public static void dibujarCuadradoRelleno(int lado) {
+        for (int i = 0; i < lado; i++) {
+            for (int j = 0; j < lado; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    // Cuadrado sin relleno (solo el borde)
+    public static void dibujarCuadradoHueco(int lado) {
+        for (int i = 0; i < lado; i++) {
+            for (int j = 0; j < lado; j++) {
+                if (i == 0 || i == lado - 1 || j == 0 || j == lado - 1) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    // Triángulo rectángulo relleno
+    public static void dibujarTrianguloRelleno(int altura) {
+        for (int i = 1; i <= altura; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    // Triángulo rectángulo sin relleno: primer asterisco, último y la base
+    public static void dibujarTrianguloHueco(int altura) {
+        for (int i = 1; i <= altura; i++) {
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i || i == altura) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+
 }
