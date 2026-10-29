@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Triangulo {
     public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
-            System.out.print("Lado: ");
+            System.out.print("Altura: ");
             int altura = sc.nextInt();
             sc.close();
             dibujarRelleno(altura);
