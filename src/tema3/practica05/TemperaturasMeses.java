@@ -88,7 +88,7 @@ public class TemperaturasMeses {
         llenar();
         mostrar();
         mostrarInverso();
-        System.out.printf("Media anual: %.2f%n", media());
+        System.out.println("Media anual: " + media());
         mesesCalurosos();
         System.out.println("¿Algún mes > 30? " + hayMesCaluroso() + " / " + hayMesCalurosoSinBreak());
         System.out.println("¿Temperaturas repetidas? " + hayRepetidas());
