@@ -5,34 +5,62 @@ import java.util.Arrays;
 /** Práctica 06.3: máximo posición a posición de dos matrices de las mismas dimensiones. */
 public class MaximoMatrices {
 
-    static boolean mismasDimensiones(int[][] a, int[][] b) {
-        if (a.length != b.length) return false;
-        for (int i = 0; i < a.length; i++) {
-            if (a[i].length != b[i].length) return false;
-        }
-        return true;
+    public static void main(String[] args) {
+
+        int[][] a = {{1,2,1},{4,5,6},{7,8}};
+        int[][] b = {{5,6,3},{7,5,2},{1,8}};
+
+        mostrarMatrizMaxima(a, b);
     }
 
-    static int[][] maximo(int[][] a, int[][] b) {
-        int[][] m = new int[a.length][];
-        for (int i = 0; i < a.length; i++) {
-            m[i] = new int[a[i].length];
-            for (int j = 0; j < a[i].length; j++) {
-                m[i][j] = Math.max(a[i][j], b[i][j]);
+    static void mostrarMatrizMaxima(int[][] a, int[][] b) {
+
+        int[][] c = matrizMaxima(a, b);
+        if(c != null) {
+
+            for (int[] fila : c) {
+                System.out.println(Arrays.toString(fila));
             }
         }
-        return m;
+        else System.out.println("ERROR: las matrices no son iguales");
     }
 
-    public static void main(String[] args) {
-        int[][] a = {{1, 2, 3}, {6, 7, 8}, {10, 8, 15}};
-        int[][] b = {{5, 1, 4}, {7, 3, 11}, {11, 12, 13}};
+    static int[][] matrizMaxima(int[][] a, int[][] b) {
+
         if (mismasDimensiones(a, b)) {
-            System.out.println(Arrays.deepToString(maximo(a, b)));   // [[5, 2, 4], [7, 7, 11], [11, 12, 15]]
-        } else {
-            System.out.println("Las matrices no se pueden comparar");
+
+            // Creamos una matriz "c" de las mismas dimensiones
+            int[][] c = new int[a.length][];
+            for (int i = 0; i < a.length; i++) {
+                c[i] = new int[a[i].length];
+            }
+
+            // Recorremos los elementos comparando valor a valor
+            for (int i = 0; i < c.length; i++) {
+                for (int j = 0; j < c[i].length; j++) {
+
+                    if(a[i][j] > b[i][j])
+                        c[i][j] = a[i][j];
+                    else
+                        c[i][j] = b[i][j];
+
+                    // También se podría hacer:     c[i][j] = Math.max(a[i][j], b[i][j]);
+                }
+            }
+            return c;
         }
-        int[][] c = {{1, 2}, {3}};
-        System.out.println(mismasDimensiones(a, c) ? "Comparables" : "Las matrices no se pueden comparar");
+        return null;
     }
+
+    static boolean mismasDimensiones(int[][] a, int[][] b) {
+        if (a.length == b.length) {
+            for (int i = 0; i < a.length; i++) {
+                if (a[i].length != b[i].length)
+                    return false;
+            }
+            return true;
+        }
+        return false;
+    }
+
 }

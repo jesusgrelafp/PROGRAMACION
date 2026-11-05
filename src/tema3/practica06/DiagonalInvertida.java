@@ -13,7 +13,14 @@ public class DiagonalInvertida {
         return m;
     }
 
+    static void imprimirMatriz(char[][] m) {
+        for (char[] fila : m) {
+            for (char c : fila) System.out.print(c + " ");
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
-        Diagonal.imprimirMatriz(crearMatriz(4));
+        imprimirMatriz(crearMatriz(4));
     }
 }
