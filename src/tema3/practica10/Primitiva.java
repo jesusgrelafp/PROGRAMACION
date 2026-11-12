@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-/** Práctica 10.4: sorteo de la Primitiva con Arrays.sort y Arrays.binarySearch. */
+/** Práctica 10.3: sorteo de la Primitiva con Arrays.sort y Arrays.binarySearch. */
 public class Primitiva {
 
     static int[] sorteo() {
