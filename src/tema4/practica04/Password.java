@@ -29,7 +29,7 @@ public class Password {
         this.contrasena = generarPassword();
     }
 
-    /** Método auxiliar privado: solo lo usa la propia clase. */
+    /** Metodo auxiliar privado: solo lo usa la propia clase. */
     private String generarPassword() {
         Random r = new Random();
         String resultado = "";
